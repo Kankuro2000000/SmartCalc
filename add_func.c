@@ -8,7 +8,7 @@ int	double_size(char *str)
 
 	i = 0;
 	negative = 0;
-	if (*str == '-')
+	if (*str == '-' || *str == '+')
 	{
 		negative = 1;
 		str++;
@@ -21,5 +21,5 @@ int	double_size(char *str)
 		str++;
 		i++;
 	}
-	return (i + 1 + negative);
+	return (i + flag + negative);
 }

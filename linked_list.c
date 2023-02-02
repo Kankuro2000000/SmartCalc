@@ -15,9 +15,8 @@ void	pop(Node **head)
 	Node*	prev;
 
 	prev = NULL;
-	if (head == NULL) 
-	{
-		exit(-1);
+	if ((*head) == NULL) {
+		return ;
 	}
 	prev = (*head);
 	(*head) = (*head)->next;
@@ -40,9 +39,8 @@ void	pop_str(Node_str **head)
 	Node_str	*prev;
 
 	prev = NULL;
-	if (head == NULL) 
-	{
-		exit(-1);
+	if ((*head) == NULL) {
+		return ;
 	}
 	prev = (*head);
 	(*head) = (*head)->next;
