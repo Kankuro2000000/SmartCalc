@@ -16,8 +16,10 @@ int my_strcmp(const char *str, const char *str2){
 	return (1);
 }
 
-int check_input(const char *str){
-	while (*str){
+int check_input(const char *str) {
+	if (!str || *str == '\0' || strlen(str) > 256)
+		return 0;
+	while (*str) {
 		if ((*str >= '0' && *str <= '9') || *str == '.'
             || *str == '*' || *str == '/' || *str == '-' || *str == '+'
 			|| *str == '(' || *str == ')' || *str == '^' || *str == ' '){

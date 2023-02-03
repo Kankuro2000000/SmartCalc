@@ -205,18 +205,20 @@ void	print_stack(Node *ft_double, Node_str *operator) {
 	}
 }
 
-int main()
+int main(int argc, char **argv)
 {
 	Node		*stack;
-	const char	*str = "123.1+32+sqrt(4)";
+	const char	*str = "1+1";
 	char		*string;
 	double		res;
 
+	if (argc == 2) {
+		str = argv[1];
+	}
 	if (!check_input(str))
 		return printf("INPUT ERROR\n");
 	string = remove_spaces(str);
 	res = procces(string);
-	printf("%f\n", res);
-	printf("%s\n", string);
+	printf("%s = %g\n", string, res);
 	return 0;
 }
